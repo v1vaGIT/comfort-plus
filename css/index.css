@@ -381,9 +381,11 @@ footer{
 }
 .footerTopSection__contacts__phone{
   font-weight: 700;
+  color: var(--secondaryTextColor)
 }
 .footerTopSection__contacts__mail{
   font-size: 22px;
+  color: var(--secondaryTextColor)
 }
 .footerMiddleSection{
   display: flex;
@@ -396,6 +398,7 @@ footer{
   font-family: Montserrat Alternates, sans-serif;
   font-weight: 700;
   font-size: 32px;
+  color: var(--secondaryTextColor)
 }
 .footerMiddleSection__button{
   padding: 18px 0 17px;
@@ -413,6 +416,7 @@ footer{
 .footerBottomSection__authorRules{
   width: 792px;
   font-size: 22px;
+  color: var(--secondaryTextColor)
 }
 .footerBottomSection__vivaTeam{
   display: flex;
@@ -421,11 +425,16 @@ footer{
 }
 .footerBottomSection__vivaTeam__text{
   font-size: 22px;
+  color: var(--secondaryTextColor)
 }
 .footerTopSection__image{
   width: 221px;
   height: 66px;
   background-image: var(--footerLogo);
+}
+.feedbackSectionContent{
+  width: 100%;
+  padding: 40px 0 60px;
 }
 @media screen and (max-width: 1400px) {
   .headerSection{
