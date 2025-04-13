@@ -100,6 +100,7 @@ html{
   --footerButtonColor: #009D7D;
   --footerButtonTextColor: #FFFFFF;
   --burgerMenuColor: #000000;
+  --accordionBackgroundColor: #1937591A;
   --menuLogo: url("../img/menu/logo-light-theme.png");
   --footerLogo: url("../img/footer/logo-light-theme.png");
   --balloonImage: url("../img/contactsPage/mapBallon/light-theme.png");
@@ -117,6 +118,7 @@ html{
     --footerButtonColor: #FFFFFF;
     --footerButtonTextColor: #202020;
     --burgerMenuColor: #FFFFFF;
+    --accordionBackgroundColor: #8DC1FF1A;
     --menuLogo: url("../img/menu/logo-dark-theme.png");
     --footerLogo: url("../img/footer/logo-dark-theme.png");
     --balloonImage: url("../img/contactsPage/mapBallon/dark-theme.png");
@@ -165,7 +167,7 @@ footer{
   flex-direction: column;
   justify-content: space-between;
 }
-.headerSection{
+.mainPageHeaderSection{
   width: 100%;
   display: flex;
   align-items: end;
@@ -179,17 +181,17 @@ footer{
   background-size: cover;
   justify-content: space-between;
 }
-.headerSection__textBox{
+.mainPageHeaderSection__textBox{
   display: flex;
   flex-direction: column;
 }
-.headerSection__textBox__topText{
+.mainPageHeaderSection__textBox__topText{
   font-family: Montserrat Alternates, sans-serif;
   font-weight: 400;
   font-size: 26px;
   color: #FFFFFF;
 }
-.headerSection__textBox__bottomText{
+.mainPageHeaderSection__textBox__bottomText{
   font-family: Montserrat Alternates,sans-serif;
   font-weight: 700;
   font-size: 42px;
@@ -197,7 +199,7 @@ footer{
   text-transform: uppercase;
   color: #FFFFFF;
 }
-.headerSection__button{
+.mainPageHeaderSection__button{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -566,13 +568,16 @@ footer{
   font-weight: 400;
   font-size: 24px;
 }
-.projectHeaderSection{
+.headerSection{
+  position: relative;
   width: 100%;
   display: flex;
-  align-items: end;
-  flex-direction: row;
-  padding: 47px 60px;
+  flex-direction: column;
+  align-items: center;
   height: calc(100vh - 70px);
+}
+.headerSection br{
+  display: none;
 }
 .projectPageSectionContent{
   display: flex;
@@ -645,26 +650,123 @@ footer{
   font-weight: 400;
   font-size: 22px;
 }
-@media screen and (max-width: 1100px){
-  .contactsPageContentSectionContent__row{
-    flex-direction: column;
-    gap: 15px;
+.headerSection__title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 98px;
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 700;
+  font-size: 120px;
+  text-transform: uppercase;
+}
+.headerSection__background{
+  width: 100%;
+  height: calc(100% - 98px);
+  background-size: cover;
+  background-position: center center;
+}
+.faqPageHeaderSection__background{
+  background-image: url("../img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png");
+}
+.accordionContainer{
+  padding: 60px 172px 0;
+}
+.accordionContainer__accordion{
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: #193759 solid 1px;
+}
+.accordionContainer__panel{
+  padding: 0 111px;
+  max-height: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  background-color: var(--accordionBackgroundColor);
+}
+.accordionContainer__accordionTextContainer{
+  display: flex;
+}
+.accordionContainer__accordionSvgContainer__svg path{
+  stroke: var(--mainTextColor);
+}
+.accordionContainer__accordionTextContainer__title{
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.endPageLink{
+  padding: 120px 172px;
+  display: flex;
+  flex-direction: column;
+}
+.endPageLink__topText{
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+.projectEndPageLink__topText{
+  font-weight: 400;
+  font-size: 42px;
+}
+.endPageLink__bottomTextContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.endPageLink__bottomTextContainer__text{
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+.projectEndPageLink__bottomTextContainer__text{
+  font-weight: 700;
+  font-size: 70px;
+}
+.endPageLink__bottomTextContainer__link{
+  display: flex;
+  background-color: var(--additionalColor);
+  padding: 18px 112px 17px;
+  margin-bottom: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+@media screen and (max-width: 1440px){
+  .endPageLink__bottomTextContainer__link{
+    padding: 12px 93px 12px 93px;
+    font-size: 20px; ;
   }
-  .contactsPageContentSectionContent{
-    gap: 15px;
+  .endPageLink__bottomTextContainer__text{
+    font-size: 35px;
+  }
+  .endPageLink__topText{
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 1400px) {
   *{
     font-size: 20px;
   }
-  .headerSection__textBox{
+  .mainPageHeaderSection__textBox{
     gap: 5px;
   }
-  .headerSection__textBox__topText{
+  .mainPageHeaderSection__textBox__topText{
     font-size: 23px;
   }
-  .headerSection__textBox__bottomText{
+  .mainPageHeaderSection__textBox__bottomText{
     font-size: 30px;
   }
   .textContainer__link{
@@ -684,42 +786,11 @@ footer{
     width: 100%;
   }
 }
-@media screen and (max-width: 1000px) {
-  .contactsPageContentSectionContent__row__element__header{
-    font-size: 17px;
-    padding: 0;
-  }
-  .contactsPageContentSectionContent__row__element__links__link{
-    font-size: 17px;
-  }
-  .sectionStats{
-    flex-direction: column;
-    gap: 27px;
-    padding: 40px 0 0;
-  }
-  .footerMiddleSection__button{
-    width: 100%;
-  }
-  .footerMiddleSection{
-    align-items: start;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .footerBottomSection{
-    flex-direction: column;
-    align-items: center;
-    gap: 80px;
-    text-align: center;
-  }
-  .menu__logo{
-    width: 128.5px;
-    height: 29.2px;
-  }
-  .menu__buttonsContainer__button{
-    font-size: 12px;
-  }
-}
 @media screen and (max-width: 1300px) {
+  .headerSection__title{
+    align-items: end;
+    font-size: 90px;
+  }
   .contactsPageContentSectionContent__row__element__name{
     font-size: 22px;
   }
@@ -762,8 +833,119 @@ footer{
   .projectSectionContent__images__image{
     width: 50%;
   }
+  .endPageLink__bottomTextContainer__link{
+    padding: 8px 94px 8px 93px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .endPageLink__bottomTextContainer__text{
+    font-weight: 700;
+    font-size: 26px;
+  }
+  .endPageLink__topText{
+    font-weight: 400;
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 1100px){
+  .contactsPageContentSectionContent__row{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contactsPageContentSectionContent{
+    gap: 15px;
+  }
+  .endPageLink__bottomTextContainer{
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .endPageLink__bottomTextContainer__link{
+    padding: 12px 93px 12px 93px;
+    font-size: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  .endPageLink__bottomTextContainer__text{
+    font-size: 35px;
+  }
+  .endPageLink__topText{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .headerSection__title{
+    height: 132px;
+    text-align: center;
+    white-space: normal;
+    font-size: 60px;
+  }
+  .headerSection__background{
+    height: calc(100% - 132px);
+  }
+  .headerSection__title br{
+    display: block;
+  }
+  .accordionContainer__panel{
+    padding: 0 9px 0 10px;
+  }
+  .contactsPageContentSectionContent__row__element__header{
+    font-size: 17px;
+    padding: 0;
+  }
+  .contactsPageContentSectionContent__row__element__links__link{
+    font-size: 17px;
+  }
+  .sectionStats{
+    flex-direction: column;
+    gap: 27px;
+    padding: 40px 0 0;
+  }
+  .footerMiddleSection__button{
+    width: 100%;
+  }
+  .footerMiddleSection{
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footerBottomSection{
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    text-align: center;
+  }
+  .menu__logo{
+    width: 128.5px;
+    height: 29.2px;
+  }
+  .menu__buttonsContainer__button{
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .accordionContainer{
+    padding: 40px 15px 0;
+  }
+  .endPageLink{
+    padding: 80px 15px;
+  }
+  .accordionContainer{
+
+  }
+  .endPageLink__bottomTextContainer__link{
+    padding: 8px 94px 8px 93px;
+    font-weight: 600;
+    font-size: 17px;
+  }
+  .endPageLink__bottomTextContainer__text{
+    font-weight: 700;
+    font-size: 26px;
+  }
+  .endPageLink__topText{
+    font-weight: 400;
+    font-size: 17px;
+  }
   *{
     font-size: 17px;
   }
@@ -782,7 +964,7 @@ footer{
     font-size: 17px;
   }
   .contactsPageContentSectionContent{
-    padding: 30px 16px;
+    padding: 30px 16px 80px;
   }
   .feedbackSection__sliderContainer__slider__content__image{
     height: 227px;
@@ -843,7 +1025,7 @@ footer{
   .benefitSectionContent__images__image{
     height: 216px;
   }
-  .headerSection__textBox__topText{
+  .mainPageHeaderSection__textBox__topText{
     font-size: 19px;
   }
   .aboutSectionContent{
@@ -853,10 +1035,7 @@ footer{
     gap: 15px;
     padding-bottom: 40px;
   }
-  .headerSection{
-    gap: 5px;
-  }
-  .headerSection__textBox__bottomText{
+  .mainPageHeaderSection__textBox__bottomText{
     font-size: 27px;
   }
   .menu{
@@ -868,16 +1047,17 @@ footer{
   .sectionInfo__sectionHeader__transparentNumber{
     display: none;
   }
-  .headerSection__button{
+  .mainPageHeaderSection__button{
     padding: 7px 0 7px;
     width: 100%;
     font-size: 19px;
   }
-  .headerSection{
+  .mainPageHeaderSection{
     flex-direction: column;
     align-items: flex-start;
     justify-content: end;
     padding: 0 16px 47px;
+    gap: 5px;
   }
   .menu__buttonsContainer{
     display: none;
