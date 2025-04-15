@@ -473,6 +473,9 @@ footer{
   position: relative;
   overflow-x: scroll;
 }
+.projectSection__sliderContainer__slider::-webkit-scrollbar:horizontal{
+
+}
 .projectSection__sliderContainer__slider__imageContainer{
   flex-shrink: 0;
   width: 25%;
@@ -588,6 +591,9 @@ footer{
 }
 .projectPageSectionContentReverted{
   flex-direction: row-reverse;
+}
+.projectPageLastSectionContent{
+  padding-bottom: 0;
 }
 .projectPageSectionInfo{
   padding: 64px 172px 0;
