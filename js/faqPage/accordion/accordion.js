@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
       const panel = this.nextElementSibling;
       const svg = this.getElementsByClassName('accordionContainer__accordionSvgContainer__svg')[0]
       if (panel.style.maxHeight) {

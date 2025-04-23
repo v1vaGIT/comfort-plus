@@ -369,6 +369,12 @@ footer{
   flex-direction: column;
   justify-content: space-between;
 }
+.scrollSliderSectionContent__top__textContainer{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .projectSectionContent{
   display: flex;
   flex-direction: row;
@@ -376,12 +382,24 @@ footer{
   padding-bottom: 40px;
   z-index: 1;
 }
+.projectSectionContent__images__image{
+  background-position: center center;
+  background-size: cover;
+  width: 315px;
+  height: 286px;
+  border-radius: var(--mainBorderRadius);
+}
+.scrollSliderSectionContent__images{
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+}
 .projectSectionContent__images{
   gap: 20px;
   display: flex;
   flex-direction: row;
 }
-.projectSectionContent__images__image{
+.scrollSliderSectionContent__images__image{
   background-position: center center;
   background-size: cover;
   width: 315px;
@@ -566,6 +584,22 @@ footer{
   color: var(--secondaryAdditionalColor);
   opacity: 0.1;
 }
+.sectionInfo__sectionHeader__transparentText{
+  position: absolute;
+  font-family: Montserrat Alternates, sans-serif;
+  top: 0;
+  right: -172px;
+  text-align: center;
+  width: fit-content;
+  font-size: 132px;
+  font-weight: 650;
+  line-height: 65%;
+  height: fit-content;
+  z-index: -1;
+  text-transform: uppercase;
+  color: var(--secondaryAdditionalColor);
+  opacity: 0.1;
+}
 .benefitSectionContent__images__image__text {
   color: #FFFFFF;
   font-weight: 400;
@@ -590,6 +624,16 @@ footer{
   z-index: 1;
 }
 .projectPageSectionContentReverted{
+  flex-direction: row-reverse;
+}
+.scrollSliderSectionContent{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-bottom: 67px;
+  z-index: 1;
+}
+.scrollSliderSectionContentReverted{
   flex-direction: row-reverse;
 }
 .projectPageLastSectionContent{
@@ -659,12 +703,15 @@ footer{
 .headerSection__title{
   width: 100%;
   display: flex;
+  align-items: start;
   justify-content: center;
   height: 98px;
   font-family: Montserrat Alternates, sans-serif;
   font-weight: 700;
   font-size: 120px;
+  line-height: 90%;
   text-transform: uppercase;
+  z-index: 1;
 }
 .headerSection__background{
   width: 100%;
@@ -674,6 +721,9 @@ footer{
 }
 .faqPageHeaderSection__background{
   background-image: url("../img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png");
+}
+.offersPageHeaderSection__background{
+  background-image: url("../img/offersPage/header/0d639a5929bfc95a9168b8bd40ad033e.png");
 }
 .accordionContainer{
   padding: 60px 172px 0;
@@ -750,6 +800,186 @@ footer{
   font-weight: 600;
   font-size: 22px;
 }
+.offersPageSectionInfo{
+  padding-top: 49px;
+}
+.flatSectionOffersPage{
+  padding: 0 283px;
+  display: flex;
+  flex-direction: column;
+}
+.flatSectionOffersPage__offerElement{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 0 20px;
+}
+.flatSectionOffersPage__offerElement__title{
+  position: relative;
+  font-family: Montserrat Alternates, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.flatSectionOffersPage__offerElement__title::before{
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background-color: var(--secondaryAdditionalColor);
+  transform: translate(-100%, -50%);
+  border-radius: 50%;
+}
+.flatSectionOffersPage__offerElement__content{
+  display: flex;
+  gap: 33px;
+}
+.flatSectionOffersPage__offerElement__content__images{
+  display: flex;
+  gap: 21px;
+}
+.flatSectionOffersPage__offerElement__content__images__image{
+  width: 252px;
+  height: 230px;
+  border-radius: 10px;
+  background-position: center center;
+  background-size: cover;
+}
+.flatSectionOffersPage__offerElement__content__text{
+  font-weight: 400;
+  font-size: 22px;
+}
+.flatSectionEconomyLeftImage{
+  background-image: url("../img/offersPage/flatSection/economy/b5e839a2a6d3f4963a4471ec3a3a7521.png");
+}
+.flatSectionEconomyRightImage{
+  background-image: url("../img/offersPage/flatSection/economy/6f6ee7fecb92d704f18a2b2aeaf605f2.png");
+}
+.flatSectionCosmeticLeftImage{
+  background-image: url("../img/offersPage/flatSection/cosmetic/e5f03221cabf6972ed3bda732e5b4beb.png");
+}
+.flatSectionCosmeticRightImage{
+  background-image: url("../img/offersPage/flatSection/cosmetic/34e268524952f85479d7d2989fe1a406.png");
+}
+.flatSectionComfortLeftImage{
+  background-image: url("../img/offersPage/flatSection/comfort/54acf5ddebe93543ac877988fdc48cd1.png");
+}
+.flatSectionComfortRightImage{
+  background-image: url("../img/offersPage/flatSection/comfort/921325227d231a90dbb60ca7007fca38.png");
+}
+.flatSectionDesignerLeftImage{
+  background-image: url("../img/offersPage/flatSection/designer/0b3213c9dca54120dd82be456a3e9ac9.png");
+}
+.flatSectionDesignerRightImage{
+  background-image: url("../img/offersPage/flatSection/designer/e495eae0db0c36be30ffae337f578ac3.png");
+}
+.flatSectionEliteLeftImage{
+  background-image: url("../img/offersPage/flatSection/elite/b1ef605ab82985429429d5b7b535db5b.png");
+}
+.flatSectionEliteRightImage{
+  background-image: url("../img/offersPage/flatSection/elite/354853020c9b5c5384957a812dac1af5.png");
+}
+.offersPageSectionContent{
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  z-index: 1;
+  padding-bottom: 0;
+}
+.burgerMenuModal{
+  display: none;
+  justify-content: end;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #00000000;
+  z-index: 4;
+  overflow-x: hidden;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+.burgerMenuModal__panel{
+  padding: 26px 16px 0 35px;
+  display: flex;
+  flex-direction: column;
+  width: 72%;
+  transform: translateX(100%);
+  gap: 60px;
+  background-color: var(--menuBackgroundColor);
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+.burgerMenuModal__panel__svgContainer{
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+.burgerMenuModal__panel__links{
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+.burgerMenuModal__panel__links__link{
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+}
+.burgerMenuModal__panel__links__link::before{
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: var(--additionalColor);
+  transform: translate(-100%, -50%);
+  border-radius: 50%;
+}
+.svgExit{
+  stroke: var(--burgerMenuColor);
+}
+.projectDetailHeaderSection__background{
+  height: calc(100% - 98px);
+  width: 100%;
+  padding: 0 119px 16px 96px;
+}
+.detailBeforeSectionContent{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.detailBeforeSectionContent__imagesContainer{
+  height: 443px;
+  display: flex;
+  gap: 20px;
+}
+.detailBeforeSectionContent__imagesContainer__image{
+  width: 29%;
+  background-position: center center;
+  background-size: cover;
+}
+.detailBeforeSectionContent__imagesContainer__leftImage{
+  width: 29%;
+  background-image: url("../img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png");
+}
+.detailBeforeSectionContent__imagesContainer__rightImage{
+  width: 29%;
+  background-image: url("../img/projectDetailPage/beforeSection/bd7e56ecc34762b4585021143bcbd81e02a5736f.png");
+}
+.detailBeforeSectionContent__imagesContainer__centerImage{
+  width: 42%;
+  background-image: url("../img/projectDetailPage/beforeSection/7a4df539f6844b091e0cfb387cf263359729eca9.png");
+}
+.detailProcessSectionContent{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.detailProcessSectionContent{
+
+}
 @media screen and (max-width: 1440px){
   .endPageLink__bottomTextContainer__link{
     padding: 12px 93px 12px 93px;
@@ -793,7 +1023,14 @@ footer{
   }
 }
 @media screen and (max-width: 1300px) {
+  .scrollSliderSectionContent{
+    flex-direction: column;
+  }
+  .offersPageSectionContent{
+    flex-direction: column;
+  }
   .headerSection__title{
+    line-height: 100%;
     align-items: end;
     font-size: 90px;
   }
@@ -836,6 +1073,9 @@ footer{
   .aboutSectionContent__image{
     width: 100%;
   }
+  .scrollSliderSectionContent__images__image{
+    width: 50%;
+  }
   .projectSectionContent__images__image{
     width: 50%;
   }
@@ -851,6 +1091,12 @@ footer{
   .endPageLink__topText{
     font-weight: 400;
     font-size: 17px;
+  }
+  .flatSectionOffersPage__offerElement__content{
+    flex-direction: column;
+  }
+  .flatSectionOffersPage__offerElement__content__images__image{
+    width: 50%;
   }
 }
 @media screen and (max-width: 1100px){
@@ -928,13 +1174,23 @@ footer{
   .menu__buttonsContainer__button{
     font-size: 12px;
   }
+  .flatSectionOffersPage{
+    padding: 0 172px;
+  }
+  .offersPageHeaderSection__title{
+    height: 58px;
+    line-height: 70%;
+  }
+  .offersPageHeaderSection__background{
+    height: calc(100% - 58px);
+  }
 }
 @media screen and (max-width: 767px) {
   .accordionContainer{
     padding: 40px 15px 0;
   }
   .endPageLink{
-    padding: 80px 15px;
+    padding: 80px 16px;
   }
   .accordionContainer{
 
@@ -1028,6 +1284,13 @@ footer{
   .projectSectionContent__images{
     gap: 16px;
   }
+  .scrollSliderSectionContent__images__image{
+    width: 100%;
+    height: 148px;
+  }
+  .scrollSliderSectionContent__images{
+    gap: 16px;
+  }
   .benefitSectionContent__images__image{
     height: 216px;
   }
@@ -1077,5 +1340,43 @@ footer{
   .menu__burgerMenu{
     display: flex;
     cursor: pointer;
+  }
+  .flatSectionOffersPage{
+    padding: 0 16px;
+  }
+  .flatSectionOffersPage__offerElement__title::before{
+    display: none;
+  }
+  .flatSectionOffersPage__offerElement{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 30px 0 10px;
+  }
+  .flatSectionOffersPage__offerElement__content__images{
+    gap: 17px;
+  }
+  .flatSectionOffersPage__offerElement__content{
+    gap: 15px;
+  }
+  .flatSectionOffersPage__offerElement__content__text{
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .scrollSliderSectionContent__images{
+    max-width: 100%;
+    position: relative;
+    height: 286px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  .scrollSliderSectionContent__images__image{
+    flex-shrink: 0;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 500px) {
+  .flatSectionOffersPage__offerElement__content__images__image{
+    height: 148px;
   }
 }
