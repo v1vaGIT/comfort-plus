@@ -977,9 +977,6 @@ footer{
   flex-direction: column;
   gap: 20px;
 }
-.detailProcessSectionContent{
-
-}
 @media screen and (max-width: 1440px){
   .endPageLink__bottomTextContainer__link{
     padding: 12px 93px 12px 93px;
