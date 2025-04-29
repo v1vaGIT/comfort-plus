@@ -4,24 +4,24 @@ import 'swiper/css/scrollbar'
 import {Scrollbar} from "swiper/modules";
 
 
-export const projectSlider = () => {
-  const slider = new Swiper('.projectSection__sliderContainer', {
+export const slider = () => {
+  const slider = new Swiper('.slider__sliderContainer', {
     breakpoints: {
-      300: {
+      768: {
         slidesPerView: 2,
       },
-      500: {
+      1100: {
         slidesPerView: 3,
       },
       1200: {
         slidesPerView: 4,
       },
     },
-    slidesPerView: 2,
+    slidesPerView: 1,
     modules: [Scrollbar],
     direction: 'horizontal',
     scrollbar: {
-      el: ".projectSection__scrollbar",
+      el: "#slider",
       draggable: true,
     }
   })

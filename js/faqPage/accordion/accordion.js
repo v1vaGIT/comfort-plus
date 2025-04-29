@@ -1,22 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
+// import 'accordionjs/accordion.css'
+import 'accordionjs/accordion'
 
-  const acc = document.getElementsByClassName("accordionContainer__accordion");
+export const accordion = () => {
+  $('#accordion').accordionjs({
+    // Allow self close.(data-close-able)
+    closeAble   : true,
 
-  for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      const panel = this.nextElementSibling;
-      const svg = this.getElementsByClassName('accordionContainer__accordionSvgContainer__svg')[0]
-      if (panel.style.maxHeight) {
-        panel.style.paddingTop = "0"
-        panel.style.paddingBottom = "0"
-        panel.style.maxHeight = null;
-        svg.style.transform = "none";
-      } else {
-        panel.style.maxHeight = "fit-content";
-        panel.style.paddingTop = "40px"
-        panel.style.paddingBottom = "40px"
-        svg.style.transform = "rotate(180deg)";
-      }
-    });
-  }
-})
+    // Close other sections.(data-close-other)
+    closeOther  : true,
+
+    // Animation Speed.(data-slide-speed)
+    slideSpeed  : 150,
+
+    // The section open on first init. A number from 1 to X or false.(data-active-index)
+    activeIndex : 1,
+
+    // Callback when a section is open
+    openSection: function( section ){},
+
+    // Callback before a section is open
+    beforeOpenSection: function( section ){},
+  });
+}

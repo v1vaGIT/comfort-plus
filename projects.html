@@ -6,9 +6,7 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script src="./js/modal/modal.js"></script>
 </head>
 <body>
   <div class="mainContainer">
@@ -54,15 +52,24 @@
             <p class="sectionInfo__sectionHeader__transparentNumber">01</p>
           </div>
           <div class="scrollSliderSectionContent">
-            <div class="scrollSliderSectionContent__images">
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__leftImage"></div>
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__rightImage"></div>
+            <div id="slider1" class="swiper scrollSliderSectionContent__slider">
+              <div class="swiper-wrapper scrollSliderSectionContent__slider__images">
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+              </div>
+            </div>
+            <div class="scrollSliderSectionContent__scrollbarContainer">
+              <div id="scrollbar1" class="scrollSliderSectionContent__scrollbar swiper-scrollbar"></div>
             </div>
             <div class="scrollSliderSectionContent__top__textContainer">
               <p class="textContainer__text">Услуга «ремонт под ключ» включает в себя выполнение всех этапов ремонтных работ.
                 Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
                 не вникая в технические детали.</p>
-              <a class="textContainer__link">смотреть все проекты</a>
+              <a href="./project-detail.html" class="textContainer__link">смотреть подробнее</a>
             </div>
           </div>
         </div>
@@ -75,17 +82,59 @@
             <p class="sectionInfo__sectionHeader__transparentNumber">02</p>
           </div>
           <div class="scrollSliderSectionContent scrollSliderSectionContentReverted">
-            <div class="scrollSliderSectionContent__images">
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__leftImage"></div>
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__rightImage"></div>
+            <div id="slider2" class="swiper scrollSliderSectionContent__slider">
+              <div class="swiper-wrapper scrollSliderSectionContent__slider__images">
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+              </div>
+            </div>
+            <div class="scrollSliderSectionContent__scrollbarContainer">
+              <div id="scrollbar2" class="scrollSliderSectionContent__scrollbar swiper-scrollbar"></div>
             </div>
             <div class="scrollSliderSectionContent__top__textContainer">
               <p class="textContainer__text">Услуга «ремонт под ключ» включает в себя выполнение всех этапов ремонтных работ.
                 Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
                 не вникая в технические детали.</p>
-              <a class="textContainer__link">смотреть все проекты</a>
+              <a href="./project-detail.html" class="textContainer__link">смотреть подробнее</a>
             </div>
           </div>
+        </div>
+        <div class="sliderWrapper">
+          <div class="swiper slider__sliderContainer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/b904a6a3c642270e1008d494a047f901.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="slider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__scrollbarContainer">
+          <div class="slider__scrollbar swiper-scrollbar"></div>
         </div>
       </section>
       <section>
@@ -96,17 +145,59 @@
             <p class="sectionInfo__sectionHeader__transparentNumber">03</p>
           </div>
           <div class="scrollSliderSectionContent">
-            <div class="scrollSliderSectionContent__images">
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__leftImage"></div>
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__rightImage"></div>
+            <div id="slider3" class="swiper scrollSliderSectionContent__slider">
+              <div class="swiper-wrapper scrollSliderSectionContent__slider__images">
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+              </div>
+            </div>
+            <div class="scrollSliderSectionContent__scrollbarContainer">
+              <div id="scrollbar3" class="scrollSliderSectionContent__scrollbar swiper-scrollbar"></div>
             </div>
             <div class="scrollSliderSectionContent__top__textContainer">
               <p class="textContainer__text">Услуга «ремонт под ключ» включает в себя выполнение всех этапов ремонтных работ.
                 Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
                 не вникая в технические детали.</p>
-              <a class="textContainer__link">смотреть все проекты</a>
+              <a href="./project-detail.html" class="textContainer__link">смотреть подробнее</a>
             </div>
           </div>
+        </div>
+        <div class="hideSliderWrapper">
+          <div class="swiper hideSlider__sliderContainer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/b904a6a3c642270e1008d494a047f901.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+              <div class="swiper-slide">
+                <img class="hideSlider__sliderContainer__slider__imageContainer__image"
+                     src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hideSlider__scrollbarContainer">
+          <div id="hideScrollbar" class="slider__scrollbar swiper-scrollbar"></div>
         </div>
       </section>
       <section>
@@ -117,15 +208,24 @@
             <p class="sectionInfo__sectionHeader__transparentNumber">04</p>
           </div>
           <div class="scrollSliderSectionContent scrollSliderSectionContentReverted projectPageLastSectionContent">
-            <div class="scrollSliderSectionContent__images">
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__leftImage"></div>
-              <div class="scrollSliderSectionContent__images__image projectSectionContent__images__rightImage"></div>
+            <div id="slider4" class="swiper scrollSliderSectionContent__slider">
+              <div class="swiper-wrapper scrollSliderSectionContent__slider__images">
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+                <div class="swiper-slide scrollSliderSectionContent__slider__images__imageContainer">
+                  <img class="scrollSliderSectionContent__slider__images__imageContainer__image" src="img/faqPage/header/c99a989a6f26d05a6848457a38ccb730.png">
+                </div>
+              </div>
+            </div>
+            <div class="scrollSliderSectionContent__scrollbarContainer">
+              <div id="scrollbar4" class="scrollSliderSectionContent__scrollbar swiper-scrollbar"></div>
             </div>
             <div class="scrollSliderSectionContent__top__textContainer">
               <p class="textContainer__text">Услуга «ремонт под ключ» включает в себя выполнение всех этапов ремонтных работ.
                 Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
                 не вникая в технические детали.</p>
-              <a class="textContainer__link">смотреть все проекты</a>
+              <a href="./project-detail.html" class="textContainer__link">смотреть подробнее</a>
             </div>
           </div>
         </div>
@@ -136,7 +236,7 @@
           <h3 class="endPageLink__bottomTextContainer__text projectEndPageLink__bottomTextContainer__text">
             МЫ ПОМОЖЕМ!
           </h3>
-          <a class="endPageLink__bottomTextContainer__link">связаться с нами</a>
+          <a href="https://wa.me/+79142180777" class="endPageLink__bottomTextContainer__link">связаться с нами</a>
         </div>
       </section>
       <footer>
@@ -155,11 +255,11 @@
             Остались вопросы? <br/>
             Свяжись с нами и мы тебе поможем
           </p>
-          <a class="footerMiddleSection__button">связаться с нами</a>
+          <a href="https://wa.me/+79142180777" class="footerMiddleSection__button">связаться с нами</a>
         </div>
         <div class="footerBottomSection">
           <p class="footerBottomSection__authorRules">© 2025 Все права на публикуемые на сайте материалы принадлежат<br/>ООО "Комфорт-плюс"</p>
-          <div class="footerBottomSection__vivaTeam">
+          <a href="https://t.me/v1vaqq" class="footerBottomSection__vivaTeam">
             <p class="footerBottomSection__vivaTeam__text">Разработка</p>
             <svg width="197" height="32" viewBox="0 0 197 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M26.5 8.224L16.254 31.164H9.492L0 7.224H6.5L13.02 23.94L20 8.224H26.5Z" fill="white"/>
@@ -171,7 +271,7 @@
               <path d="M169.873 16.0536C170.198 17.1562 170.36 18.357 170.36 19.656L162.002 21.273L175.5 18.769L174.117 15.33L169.873 16.0536Z" fill="white"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2359 31.164V1.764H20V7.224H32.4319V31.164H39.2359Z" fill="white"/>
             </svg>
-          </div>
+          </a>
         </div>
       </footer>
     </div>

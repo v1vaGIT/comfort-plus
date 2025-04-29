@@ -6,12 +6,9 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/index.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
-  <script src="./js/projectDetailPage/beforeAfterSlider.js"></script>
-  <script src="./js/modal/modal.js"></script>
 </head>
 <body>
 <div class="mainContainer">
@@ -62,12 +59,25 @@
             Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
             не вникая в технические детали.
           </p>
-          <div class="detailBeforeSectionContent__imagesContainer">
-            <div class="detailBeforeSectionContent__imagesContainer__image detailBeforeSectionContent__imagesContainer__leftImage"></div>
-            <div class="detailBeforeSectionContent__imagesContainer__image detailBeforeSectionContent__imagesContainer__centerImage"></div>
-            <div class="detailBeforeSectionContent__imagesContainer__image detailBeforeSectionContent__imagesContainer__rightImage"></div>
+          <div class="detailBeforeSectionContent__sliderWrapper">
+            <div class="swiper detailBeforeSectionContent__slider">
+              <div class="swiper-wrapper detailBeforeSectionContent__slider__images">
+                <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer">
+                  <img class="detailBeforeSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png">
+                </div>
+                <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer detailBeforeSectionContent__imagesContainer__centerImage">
+                  <img class="detailBeforeSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/bd7e56ecc34762b4585021143bcbd81e02a5736f.png">
+                </div>
+                <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer">
+                  <img class="detailBeforeSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/7a4df539f6844b091e0cfb387cf263359729eca9.png">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="sectionSlider__scrollbarContainer">
+        <div id="before" class="slider__scrollbar swiper-scrollbar"></div>
       </div>
     </section>
     <section>
@@ -78,16 +88,83 @@
           <p class="sectionInfo__sectionHeader__transparentText">ПРОЦЕСС</p>
         </div>
         <div class="detailProcessSectionContent">
-          <div class="detailProcessSectionContent__element"></div>
+          <p class="detailProcessSectionContent__text">
+            Услуга «ремонт под ключ» включает в себя выполнение всех этапов ремонтных работ. Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс, не вникая в технические детали.
+          </p>
+          <div class="detailProcessSectionContent__sliderWrapper">
+            <div class="swiper detailProcessSectionContent__slider">
+              <div class="swiper-wrapper detailProcessSectionContent__slider__images">
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png">
+                </div>
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/bd7e56ecc34762b4585021143bcbd81e02a5736f.png">
+                </div>
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/7a4df539f6844b091e0cfb387cf263359729eca9.png">
+                </div>
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png">
+                </div>
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/bd7e56ecc34762b4585021143bcbd81e02a5736f.png">
+                </div>
+                <div class="swiper-slide detailProcessSectionContent__slider__imageContainer">
+                  <img class="detailProcessSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/7a4df539f6844b091e0cfb387cf263359729eca9.png">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="sectionSlider__scrollbarContainer">
+        <div id="process" class="slider__scrollbar swiper-scrollbar"></div>
+      </div>
     </section>
-    <section>
+    <section class="resultSection">
       <div class="sectionInfo">
         <div class="sectionInfo__sectionHeader">
           <h2 class="sectionInfo__sectionHeader__title">ИТОГ</h2>
           <p class="sectionInfo__sectionHeader__number">03</p>
           <p class="sectionInfo__sectionHeader__transparentText">ИТОГ</p>
+        </div>
+        <div class="resultSectionContent">
+          <p class="resultSectionContent__text">Наша компания предлагает качественные услуги по ремонту квартир.
+            Мы обладаем большим опытом и профессионализмом, используем только проверенные материалы и комплектующие.
+            Наши клиенты получают индивидуальный подход, высокое качество работ и гарантию на все виды проводимых услуг.</p>
+        </div>
+      </div>
+      <div class="sliderWrapper">
+        <div class="swiper slider__sliderContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/b904a6a3c642270e1008d494a047f901.png">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+            </div>
+            <div class="swiper-slide">
+              <img class="slider__sliderContainer__slider__imageContainer__image"
+                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
+            </div>
+          </div>
+        </div>
+        <div class="slider__scrollbarContainer">
+          <div id="slider" class="slider__scrollbar swiper-scrollbar"></div>
         </div>
       </div>
     </section>
@@ -116,11 +193,11 @@
         Остались вопросы? <br/>
         Свяжись с нами и мы тебе поможем
       </p>
-      <a class="footerMiddleSection__button">связаться с нами</a>
+      <a href="https://wa.me/+79142180777" class="footerMiddleSection__button">связаться с нами</a>
     </div>
     <div class="footerBottomSection">
       <p class="footerBottomSection__authorRules">© 2025 Все права на публикуемые на сайте материалы принадлежат<br/>ООО "Комфорт-плюс"</p>
-      <div class="footerBottomSection__vivaTeam">
+      <a href="https://t.me/v1vaqq" class="footerBottomSection__vivaTeam">
         <p class="footerBottomSection__vivaTeam__text">Разработка</p>
         <svg width="197" height="32" viewBox="0 0 197 32" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M26.5 8.224L16.254 31.164H9.492L0 7.224H6.5L13.02 23.94L20 8.224H26.5Z" fill="white"/>
@@ -132,7 +209,7 @@
           <path d="M169.873 16.0536C170.198 17.1562 170.36 18.357 170.36 19.656L162.002 21.273L175.5 18.769L174.117 15.33L169.873 16.0536Z" fill="white"/>
           <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2359 31.164V1.764H20V7.224H32.4319V31.164H39.2359Z" fill="white"/>
         </svg>
-      </div>
+      </a>
     </div>
   </footer>
 </div>
