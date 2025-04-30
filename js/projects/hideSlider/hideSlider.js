@@ -13,9 +13,11 @@ export const hideSlider = () => {
       },
       900: {
         slidesPerView: 3,
+        enabled: true,
       },
       1200: {
         slidesPerView: 4,
+        enabled: true,
       },
     },
     enabled: false,

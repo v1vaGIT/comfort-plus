@@ -21,7 +21,7 @@ export const slider = () => {
     modules: [Scrollbar],
     direction: 'horizontal',
     scrollbar: {
-      el: "#slider",
+      el: "#normalSliderScrollbar",
       draggable: true,
     }
   })

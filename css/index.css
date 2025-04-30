@@ -794,7 +794,7 @@ footer{
 }
 .accordionContainer__accordion{
   padding-top: 16px;
-  padding-left: 25px;
+  padding-left: 43px;
   display: flex;
   align-items: center;
   height: 50px;
@@ -998,6 +998,7 @@ footer{
   gap: 42px;
 }
 .burgerMenuModal__panel__links__link{
+  width: fit-content;
   font-weight: 700;
   font-size: 20px;
   position: relative;
@@ -1080,6 +1081,9 @@ footer{
   .endPageLink__topText{
     font-size: 24px;
   }
+}
+.acc_active .accordionContainer__accordionSvgContainer__svg{
+  transform: rotate(180deg);
 }
 @media screen and (max-width: 1400px) {
   *{
