@@ -28,6 +28,8 @@
   "dependencies": {
     "accordionjs": "^2.1.2",
     "countup.js": "^2.8.2",
+    "flubber": "^0.4.2",
+    "juxtaposejs": "^1.1.6",
     "swiper": "^11.2.6"
   }
 }

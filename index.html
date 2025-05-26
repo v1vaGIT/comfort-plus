@@ -24,13 +24,8 @@
 
 <body>
     <div class="mainContainer">
-      <div class="burgerMenuModal">
+      <dialog class="burgerMenuModal">
         <div class="burgerMenuModal__panel">
-          <div class="burgerMenuModal__panel__svgContainer">
-            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="svgExit" d="M1 1L22 22M22 1L1 22" stroke="black"/>
-            </svg>
-          </div>
           <div class="burgerMenuModal__panel__links">
             <a href="./projects.html" class="burgerMenuModal__panel__links__link">Проекты</a>
             <a href="./offers.html" class="burgerMenuModal__panel__links__link">Услуги</a>
@@ -38,8 +33,15 @@
             <a href="./faq.html" class="burgerMenuModal__panel__links__link">FAQ</a>
           </div>
         </div>
+      </dialog>
+      <div class="modalButton">
+        <div class="modalButton__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-      <div class="menu">
+      <nav class="menu">
         <a href="./index.html" class="menu__logo"></a>
         <div class="menu__buttonsContainer">
           <a href="./projects.html" class="menu__buttonsContainer__button">Проекты</a>
@@ -47,12 +49,7 @@
           <a href="./contacts.html" class="menu__buttonsContainer__button">Контакты</a>
           <a href="./faq.html" class="menu__buttonsContainer__button">FAQ</a>
         </div>
-        <div class="menu__burgerMenu">
-          <svg width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="svgBurgerMenu" d="M0.357422 1H31.0001M0.357422 8.85455H31.0001M0.357422 17H31.0001"/>
-          </svg>
-        </div>
-      </div>
+      </nav>
       <div class="content">
         <section class="mainPageHeaderSection">
           <div class="mainPageHeaderSection__textBox">
@@ -110,7 +107,8 @@
             </div>
             <div class="benefitSectionContent">
               <div class="benefitSectionContent__images">
-                <div class="benefitSectionContent__images__image benefitImage1">
+                <div class="benefitSectionContent__images__image">
+                  <img src="./img/mainPage/benefitsSection/8572909d5099d58858de5da888883dfc.png">
                   <p class="benefitSectionContent__images__image__text">многолетний<br/> опыт</p>
                 </div>
                 <div class="benefitSectionContent__images__image benefitImage2">
@@ -142,7 +140,9 @@
             </div>
             <div class="projectSectionContent">
               <div class="projectSectionContent__images">
-                <div class="projectSectionContent__images__image projectSectionContent__images__leftImage"></div>
+                <div class="projectSectionContent__images__image projectSectionContent__images__leftImage">
+                  <img src="">
+                </div>
                 <div class="projectSectionContent__images__image projectSectionContent__images__rightImage"></div>
               </div>
               <div class="projectSectionContent__top__textContainer">

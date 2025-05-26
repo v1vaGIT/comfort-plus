@@ -9,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   modal()
   slider()
   beforeSlider()
-  beforeAfterSlider()
+  // beforeAfterSlider()
 })
 

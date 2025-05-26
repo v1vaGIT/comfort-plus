@@ -12,19 +12,21 @@
 </head>
 <body>
 <div class="mainContainer">
-  <div class="burgerMenuModal">
+  <dialog class="burgerMenuModal">
     <div class="burgerMenuModal__panel">
-      <div class="burgerMenuModal__panel__svgContainer">
-        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="svgExit" d="M1 1L22 22M22 1L1 22" stroke="black"/>
-        </svg>
-      </div>
       <div class="burgerMenuModal__panel__links">
         <a href="./projects.html" class="burgerMenuModal__panel__links__link">Проекты</a>
         <a href="./offers.html" class="burgerMenuModal__panel__links__link">Услуги</a>
         <a href="./contacts.html" class="burgerMenuModal__panel__links__link">Контакты</a>
         <a href="./faq.html" class="burgerMenuModal__panel__links__link">FAQ</a>
       </div>
+    </div>
+  </dialog>
+  <div class="modalButton">
+    <div class="modalButton__icon">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
   <div class="menu">
@@ -35,16 +37,13 @@
       <a href="./contacts.html" class="menu__buttonsContainer__button">Контакты</a>
       <a href="./faq.html" class="menu__buttonsContainer__button">FAQ</a>
     </div>
-    <div class="menu__burgerMenu">
-      <svg width="31" height="18" viewBox="0 0 31 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path class="svgBurgerMenu" d="M0.357422 1H31.0001M0.357422 8.85455H31.0001M0.357422 17H31.0001"/>
-      </svg>
-    </div>
   </div>
   <div class="content">
-    <section class="headerSection">
+    <section class="projectPageHeaderSection">
       <h2 class="headerSection__title offersPageHeaderSection__title">просмотр</h2>
-      <div id="beforeAfterSlider" class="projectDetailHeaderSection__background"></div>
+      <div id="juxtapose" class="projectDetailHeaderSection__background">
+
+      </div>
     </section>
     <section>
       <div class="sectionInfo">
@@ -59,13 +58,25 @@
             Это позволяет клиенту сосредоточиться на выборе материалов и контролировать процесс,
             не вникая в технические детали.
           </p>
+          <div class="detailBeforeSectionContent__imagesContainer">
+            <div class="detailBeforeSectionContent__imagesContainer__imageContainer">
+              <img src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png" class="detailBeforeSectionContent__imagesContainer__imageContainer__image">
+            </div>
+            <div class="detailBeforeSectionContent__imagesContainer__imageContainer">
+              <img src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png" class="detailBeforeSectionContent__imagesContainer__imageContainer__image">
+            </div>
+            <div class="detailBeforeSectionContent__imagesContainer__imageContainer">
+              <img src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png" class="detailBeforeSectionContent__imagesContainer__imageContainer__image">
+            </div>
+          </div>
+
           <div class="detailBeforeSectionContent__sliderWrapper">
             <div class="swiper detailBeforeSectionContent__slider">
               <div class="swiper-wrapper detailBeforeSectionContent__slider__images">
                 <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer">
                   <img class="detailBeforeSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/b762a9782347035da88e23ce2921fd1ecee24936.png">
                 </div>
-                <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer detailBeforeSectionContent__imagesContainer__centerImage">
+                <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer">
                   <img class="detailBeforeSectionContent__slider__imageContainer__image" alt="image" src="/img/projectDetailPage/beforeSection/bd7e56ecc34762b4585021143bcbd81e02a5736f.png">
                 </div>
                 <div class="swiper-slide detailBeforeSectionContent__slider__imageContainer">
@@ -73,7 +84,11 @@
                 </div>
               </div>
             </div>
+            <div class="detailBeforeSectionContent__scrollbar">
+              <div class="slider__scrollbar swiper-scrollbar"></div>
+            </div>
           </div>
+
         </div>
       </div>
       <div class="sectionSlider__scrollbarContainer">
@@ -131,40 +146,8 @@
         <div class="resultSectionContent">
           <p class="resultSectionContent__text">Наша компания предлагает качественные услуги по ремонту квартир.
             Мы обладаем большим опытом и профессионализмом, используем только проверенные материалы и комплектующие.
-            Наши клиенты получают индивидуальный подход, высокое качество работ и гарантию на все виды проводимых услуг.</p>
-        </div>
-      </div>
-      <div class="sliderWrapper">
-        <div class="swiper slider__sliderContainer">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/b904a6a3c642270e1008d494a047f901.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="slider__sliderContainer__slider__imageContainer__image"
-                   src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">
-            </div>
-          </div>
-        </div>
-        <div class="slider__scrollbarContainer">
-          <div id="normalSliderScrollbar" class="slider__scrollbar swiper-scrollbar"></div>
+            Наши клиенты получают индивидуальный подход, высокое качество работ и гарантию на все виды проводимых услуг.
+          </p>
         </div>
       </div>
     </section>
