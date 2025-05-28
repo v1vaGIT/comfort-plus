@@ -1,0 +1,26 @@
+{
+  "name": "comfort-themes",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.8",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "accordion-js": "^3.4.1",
+    "accordionjs": "^2.1.2",
+    "countup.js": "^2.8.2",
+    "swiper": "^11.2.6"
+  }
+}
