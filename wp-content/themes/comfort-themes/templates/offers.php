@@ -8,7 +8,7 @@ get_header(); ?>
     </section>
     <?php if ( have_rows( 'offers-item' ) ) :
         while ( have_rows( 'offers-item' ) ) : the_row();?>
-            <section>
+            <section id="trigger">
                 <div class="sectionInfo offersPageSectionInfo">
                     <div class="sectionInfo__sectionHeader">
                         <h2 class="sectionInfo__sectionHeader__title"><?php the_sub_field( 'offers-item-title' ); ?>В</h2>

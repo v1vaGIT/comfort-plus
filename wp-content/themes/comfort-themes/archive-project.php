@@ -16,7 +16,7 @@ $query = new WP_Query( $args ); ?>
     <?php if ( $query->have_posts() ) :
         while ( $query->have_posts() ) : $query->the_post(); ?>
         <?php $index = $query->current_post + 1; ?>
-            <section>
+            <section id="trigger">
                 <div class="sectionInfo projectPageSectionInfo">
                     <div class="sectionInfo__sectionHeader">
                         <h2 class="sectionInfo__sectionHeader__title"><?php echo get_the_title() ?></h2>

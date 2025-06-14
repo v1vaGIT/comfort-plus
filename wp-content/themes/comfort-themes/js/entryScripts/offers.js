@@ -1,5 +1,6 @@
-import {modal} from "../modal/modal";
+import {modal} from "../shared/modal/modal";
 import {sectionSlider} from "../projects/sectionSlider/sectionSlider";
+import {floatingButtons} from "../shared/floatingButtons/floatingButtons";
 
 document.addEventListener("DOMContentLoaded", () => {
   modal()
@@ -8,5 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollbar = el.querySelector(".scrollSliderSectionContent__scrollbar")
     sectionSlider(twoPhotoSlider, scrollbar)
   })
-  // sectionSlider('#slider1', '#scrollbar1')
+  floatingButtons()
 })

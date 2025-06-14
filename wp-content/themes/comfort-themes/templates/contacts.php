@@ -43,6 +43,7 @@ get_header(); ?>
             </div>
         </div>
         <div id="map" class="contactsPageMap"></div>
+        <div id="trigger"></div>
     </section>
 
 <?php

@@ -16,7 +16,7 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modal/modal */ \"./js/modal/modal.js\");\n/* harmony import */ var _faqPage_accordion_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../faqPage/accordion/accordion */ \"./js/faqPage/accordion/accordion.js\");\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_modal_modal__WEBPACK_IMPORTED_MODULE_0__.modal)()\n  ;(0,_faqPage_accordion_accordion__WEBPACK_IMPORTED_MODULE_1__.accordion)()\n})\n\n\n//# sourceURL=webpack://comfort-themes/./js/entryScripts/faq.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _shared_modal_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/modal/modal */ \"./js/shared/modal/modal.js\");\n/* harmony import */ var _faqPage_accordion_accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../faqPage/accordion/accordion */ \"./js/faqPage/accordion/accordion.js\");\n/* harmony import */ var _shared_floatingButtons_floatingButtons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/floatingButtons/floatingButtons */ \"./js/shared/floatingButtons/floatingButtons.js\");\n\n\n\n\ndocument.addEventListener(\"DOMContentLoaded\", () => {\n  (0,_shared_modal_modal__WEBPACK_IMPORTED_MODULE_0__.modal)()\n  ;(0,_faqPage_accordion_accordion__WEBPACK_IMPORTED_MODULE_1__.accordion)()\n  ;(0,_shared_floatingButtons_floatingButtons__WEBPACK_IMPORTED_MODULE_2__.floatingButtons)()\n})\n\n\n//# sourceURL=webpack://comfort-themes/./js/entryScripts/faq.js?");
 
 /***/ }),
 
@@ -31,14 +31,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./js/modal/modal.js":
-/*!***************************!*\
-  !*** ./js/modal/modal.js ***!
-  \***************************/
+/***/ "./js/shared/floatingButtons/floatingButtons.js":
+/*!******************************************************!*\
+  !*** ./js/shared/floatingButtons/floatingButtons.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   modal: () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = () => {\n  const onBurgerButtonClick = async () => {\n    const burgerModal = document.getElementsByClassName(\"burgerMenuModal\")[0]\n    const panel = document.getElementsByClassName(\"burgerMenuModal__panel\")[0]\n    const burgerMenuButton = document.getElementsByClassName(\"modalButton__icon\")[0]\n    burgerModal.classList.toggle(\"_active\")\n    panel.classList.toggle(\"_active\")\n    burgerMenuButton.classList.toggle(\"_active\")\n  }\n\n  const burgerMenuButton = document.getElementsByClassName(\"modalButton\")[0]\n  const burgerMenuModal = document.getElementsByClassName(\"burgerMenuModal\")[0]\n  burgerMenuButton.addEventListener(\"click\", onBurgerButtonClick)\n  burgerMenuModal.addEventListener(\"click\", (event) => {\n    if (event.target !== burgerMenuModal) {return}\n    onBurgerButtonClick()\n  })\n}\n\n\n//# sourceURL=webpack://comfort-themes/./js/modal/modal.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   floatingButtons: () => (/* binding */ floatingButtons)\n/* harmony export */ });\nconst floatingButtons = () => {\r\n    const contactButton = document.getElementsByClassName(\"hiddenButtons__contactButtonContainer__button\")[0]\r\n    const scrollButton = document.getElementsByClassName(\"hiddenButtons__scrollToTopButton\")[0]\r\n\r\n    const controller = new ScrollMagic.Controller();\r\n\r\n    var scene = new ScrollMagic.Scene({\r\n        triggerElement: \"#trigger\"\r\n    }).setClassToggle(\".hiddenButtons\", \"_visible\")\r\n    controller.addScene(scene);\r\n\r\n    //contact button event\r\n    contactButton.addEventListener(\"click\", () => {\r\n        document.getElementsByClassName(\"hiddenButtons__contactButtonContainer\")[0].classList.toggle(\"_active\")\r\n        document.getElementsByClassName(\"hiddenButtons__contactButtonContainer__panel\")[0].classList.toggle(\"_active\")\r\n        contactButton.classList.toggle(\"_active\")\r\n    })\r\n    scrollButton.addEventListener(\"click\", () => {\r\n        window.scrollTo({top: 0, behavior: 'smooth'})\r\n    })\r\n}\n\n//# sourceURL=webpack://comfort-themes/./js/shared/floatingButtons/floatingButtons.js?");
+
+/***/ }),
+
+/***/ "./js/shared/modal/modal.js":
+/*!**********************************!*\
+  !*** ./js/shared/modal/modal.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   modal: () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = () => {\n  const onBurgerButtonClick = async () => {\n    const burgerModal = document.getElementsByClassName(\"burgerMenuModal\")[0]\n    const panel = document.getElementsByClassName(\"burgerMenuModal__panel\")[0]\n    const burgerMenuButton = document.getElementsByClassName(\"modalButton__icon\")[0]\n    burgerModal.classList.toggle(\"_active\")\n    panel.classList.toggle(\"_active\")\n    burgerMenuButton.classList.toggle(\"_active\")\n  }\n\n  const burgerMenuButton = document.getElementsByClassName(\"modalButton\")[0]\n  const burgerMenuModal = document.getElementsByClassName(\"burgerMenuModal\")[0]\n  burgerMenuButton.addEventListener(\"click\", onBurgerButtonClick)\n  burgerMenuModal.addEventListener(\"click\", (event) => {\n    if (event.target !== burgerMenuModal) {return}\n    onBurgerButtonClick()\n  })\n}\n\n\n//# sourceURL=webpack://comfort-themes/./js/shared/modal/modal.js?");
 
 /***/ }),
 

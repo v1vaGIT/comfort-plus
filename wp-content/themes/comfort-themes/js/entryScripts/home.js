@@ -1,11 +1,13 @@
-import {modal} from "../modal/modal";
+import {modal} from "../shared/modal/modal";
 import {projectSlider} from "../mainPage/projectSection/projectSlider";
 import {feedbackSlider} from "../mainPage/feedbackSection/feedbackSlider";
-import {odometer} from "../mainPage/aboutSection/odometer";
+import {form} from "../mainPage/form/form";
+import {floatingButtons} from "../shared/floatingButtons/floatingButtons";
 
 document.addEventListener("DOMContentLoaded", () => {
   modal()
-  // odometer()
+  floatingButtons()
+  form()
   projectSlider()
   feedbackSlider()
 })

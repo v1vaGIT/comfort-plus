@@ -1,7 +1,7 @@
-import {modal} from "../modal/modal";
+import {modal} from "../shared/modal/modal";
 import {sectionSlider} from "../projects/sectionSlider/sectionSlider";
 import {slider} from "../projects/slider/slider";
-import {hideSlider} from "../projects/hideSlider/hideSlider";
+import {floatingButtons} from "../shared/floatingButtons/floatingButtons";
 
 document.addEventListener("DOMContentLoaded", () => {
   modal()
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollbar = el.querySelector(".slider__scrollbar")
     slider(sliderElement, scrollbar)
   })
-
-  // hideSlider()
+  floatingButtons()
 })
 

@@ -31,7 +31,7 @@ get_header(); ?>
         <?php endif; ?>
     </div>
 </section>
-<section class="endPageLink">
+<section id="trigger" class="endPageLink">
     <p class="endPageLink__topText">Не нашли ответа на свой вопрос?</p>
     <div class="endPageLink__bottomTextContainer">
         <h3 class="endPageLink__bottomTextContainer__text">Свяжитесь с нами<br>

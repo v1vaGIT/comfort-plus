@@ -5,7 +5,7 @@ get_header(); ?>
         <h2 class="headerSection__title offersPageHeaderSection__title">просмотр</h2>
         <div id="beforeAfterSlider" class="projectDetailHeaderSection__background"></div>
     </section>
-    <section>
+    <section id="trigger">
         <div class="sectionInfo">
             <div class="sectionInfo__sectionHeader">
                 <h2 class="sectionInfo__sectionHeader__title">ДО</h2>
@@ -39,9 +39,11 @@ get_header(); ?>
                 <?php endif; ?>
             </div>
         </div>
+        <?php if (count($before_section_images_urls) > 2) : ?>
         <div class="sectionSlider__scrollbarContainer">
             <div id="beforeScrollbar" class="slider__scrollbar swiper-scrollbar"></div>
         </div>
+        <?php endif; ?>
     </section>
     <section>
         <div class="sectionInfo">
@@ -82,9 +84,11 @@ get_header(); ?>
                                 <?php endforeach; ?>
                             </div>
                         </div>
+                    <?php if (count($process_section_images_urls) > 2) : ?>
                         <div class="sectionSlider__scrollbarContainer">
                             <div id="processScrollbar" class="slider__scrollbar swiper-scrollbar"></div>
                         </div>
+                    <?php endif; ?>
                     </div>
                 <?php endif; ?>
             </div>
@@ -102,49 +106,41 @@ get_header(); ?>
             <p class="resultSectionContent__text">
                 <?php the_field( 'after-section-description' ); ?>
             </p>
-            <!--            <div class="sliderWrapper">-->
-            <!--                <div class="swiper slider__sliderContainer">-->
-            <!--                    <div class="swiper-wrapper">-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">-->
-            <!--                        </div>-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/b904a6a3c642270e1008d494a047f901.png">-->
-            <!--                        </div>-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">-->
-            <!--                        </div>-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">-->
-            <!--                        </div>-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">-->
-            <!--                        </div>-->
-            <!--                        <div class="swiper-slide">-->
-            <!--                            <img class="slider__sliderContainer__slider__imageContainer__image"-->
-            <!--                                 src="img/mainPage/projectsSection/slider/cae7e790c4b097172746284fef5cebf0.png">-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--                <div class="slider__scrollbarContainer">-->
-            <!--                    <div id="afterScrollbar" class="slider__scrollbar swiper-scrollbar"></div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-        </div>
-    </section>
-    <section>
-        <div class="sectionInfo">
-            <div class="sectionInfo__sectionHeader">
-                <h2 class="sectionInfo__sectionHeader__title">видеообзор</h2>
+            <?php $after_section_images_urls = get_field( 'after-section-images' ); ?>
+            <?php if ( $after_section_images_urls ) :  ?>
+            <div class="sliderWrapper">
+                <div class="swiper slider__sliderContainer">
+                    <div class="swiper-wrapper">
+                        <?php foreach ( $after_section_images_urls as $after_section_images_url ): ?>
+                            <div class="swiper-slide">
+                                <img class="slider__sliderContainer__slider__imageContainer__image"
+                                     src="<?php echo esc_url( $after_section_images_url ); ?>">
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php if (count($after_section_images_urls) > 4) : ?>
+                <div class="slider__scrollbarContainer">
+                    <div id="afterScrollbar" class="slider__scrollbar swiper-scrollbar"></div>
+                </div>
+                <?php endif; ?>
             </div>
+            <?php endif; ?>
         </div>
-        <video></video>
     </section>
+    <?php $video_link = get_field( 'video-link' ); ?>
+    <?php if ( $video_link ) : ?>
+        <section>
+            <div class="sectionInfo">
+                <div class="sectionInfo__sectionHeader">
+                    <h2 class="sectionInfo__sectionHeader__title">видеообзор</h2>
+                </div>
+            </div>
+            <video class="videoSection__video" controls>
+                <source src="<?php echo esc_url( $video_link) ; ?>" > />
+            </video>
+        </section>
+    <?php endif; ?>
     </div>
 
 <?php
