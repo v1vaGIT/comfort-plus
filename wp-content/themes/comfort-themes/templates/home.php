@@ -318,20 +318,31 @@ get_header(); ?>
                 <p class="sectionInfo__sectionHeader__transparentNumber">02</p>
             </div>
             <div class="benefitSectionContent">
-                <div class="benefitSectionContent__images">
-                    <?php if ( have_rows( 'advantages-images' ) ) : ?>
-                        <?php while ( have_rows( 'advantages-images' ) ) : the_row(); ?>
-                            <?php if ( get_sub_field( 'advantages-images-image' ) ) : ?>
+                <?php if ( have_rows( 'advantages-images' ) ) :
+                    $advantages_images = get_field('advantages-images');
+                    $advantages_images_chunks = array_chunk($advantages_images, 4);
+                    foreach ( $advantages_images_chunks as $advantages_images_chunk):?>
+                        <div class="benefitSectionContent__images">
+                            <?php foreach ($advantages_images_chunk as $advantages_image):?>
                                 <div class="benefitSectionContent__images__image">
-                                    <img alt="advantages image" src="<?php the_sub_field( 'advantages-images-image' ); ?>" />
-                                    <p class="benefitSectionContent__images__image__text"><?php the_sub_field( 'advantages-images-text' ); ?></p>
+                                    <img alt="advantages image" src="<?php echo $advantages_image ["advantages-images-image"]?>" />
+                                    <p class="benefitSectionContent__images__image__text"><?php echo $advantages_image ["advantages-images-text"]?></p>
                                 </div>
-                            <?php endif ?>
-                        <?php endwhile; ?>
-                    <?php else : ?>
-                        <?php // No rows found ?>
-                    <?php endif; ?>
-                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach;
+                    $advantages_images_chunks = array_chunk($advantages_images, 2);
+                    foreach ( $advantages_images_chunks as $advantages_images_chunk):?>
+                        <div class="benefitSectionContent__imagesPhone">
+                            <?php foreach ($advantages_images_chunk as $advantages_image):?>
+                                <div class="benefitSectionContent__images__image">
+                                    <img alt="advantages image" src="<?php echo $advantages_image ["advantages-images-image"]?>" />
+                                    <p class="benefitSectionContent__images__image__text"><?php echo $advantages_image ["advantages-images-text"]?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
                 <p class="textContainer__text">
                     <?php the_field( 'advantages-description' ); ?>
                 </p>
@@ -416,19 +427,19 @@ get_header(); ?>
                 <p class="exampleSectionContent__textContainer__description">
                     подписывайтесь на наш <b>telegram-канал</b> – там вся правда о ремонте под ключ
                 </p>
-                <a class="exampleSectionContent__textContainer__link">
-                    <div class="exampleSectionContent__textContainer__link__svg">
-                        <svg viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M29.2729 0.247213C29.2729 0.247213 32.2329 -0.964782 31.9853 1.9784C31.9038 3.1904 31.164 7.43278 30.588 12.0208L28.6147 25.6127C28.6147 25.6127 28.4501 27.6039 26.9697 27.9503C25.4901 28.2959 23.27 26.7383 22.8586 26.3919C22.5294 26.1319 16.6918 22.2359 14.6362 20.3319C14.0602 19.8119 13.4019 18.7735 14.7185 17.5615L23.3515 8.90398C24.3382 7.86558 25.3248 5.44159 21.2136 8.38478L9.70142 16.6087C9.70142 16.6087 8.38563 17.4751 5.91938 16.6959L0.57393 14.964C0.57393 14.964 -1.39938 13.6656 1.97201 12.3672C10.1951 8.29838 20.3093 4.1432 29.2714 0.247213H29.2729Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <?php $telegram_link = get_field( 'telegram-link' ); ?>
-                    <?php if ( $telegram_link ) : ?>
+                <?php $telegram_link = get_field( 'telegram-link' ); ?>
+                <?php if ( $telegram_link ) : ?>
+                    <a href="<?php echo esc_url( $telegram_link) ; ?>" class="exampleSectionContent__textContainer__link">
+                        <div class="exampleSectionContent__textContainer__link__svg">
+                            <svg viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.2729 0.247213C29.2729 0.247213 32.2329 -0.964782 31.9853 1.9784C31.9038 3.1904 31.164 7.43278 30.588 12.0208L28.6147 25.6127C28.6147 25.6127 28.4501 27.6039 26.9697 27.9503C25.4901 28.2959 23.27 26.7383 22.8586 26.3919C22.5294 26.1319 16.6918 22.2359 14.6362 20.3319C14.0602 19.8119 13.4019 18.7735 14.7185 17.5615L23.3515 8.90398C24.3382 7.86558 25.3248 5.44159 21.2136 8.38478L9.70142 16.6087C9.70142 16.6087 8.38563 17.4751 5.91938 16.6959L0.57393 14.964C0.57393 14.964 -1.39938 13.6656 1.97201 12.3672C10.1951 8.29838 20.3093 4.1432 29.2714 0.247213H29.2729Z" fill="white"/>
+                            </svg>
+                        </div>
                         <p class="exampleSectionContent__textContainer__link__text" href="<?php echo esc_url( $telegram_link) ; ?>">
                             связаться
                         </p>
-                    <?php endif; ?>
-                </a>
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </section>
@@ -453,13 +464,13 @@ get_header(); ?>
                 </p>
                 <?php $project_example_link = get_field( 'project-example-link' ); ?>
                 <?php if ( $project_example_link ) : ?>
-                    <a class="exampleSectionContent__textContainer__link">
+                    <a href="<?php echo esc_url( $project_example_link) ; ?>" class="exampleSectionContent__textContainer__link">
                         <div class="exampleSectionContent__textContainer__link__svg">
                             <svg viewBox="0 0 31 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16.5 1C16.5 0.447715 16.0523 0 15.5 0C14.9477 0 14.5 0.447715 14.5 1H16.5ZM14.7929 21.1238C15.1834 21.5143 15.8166 21.5143 16.2071 21.1238L22.5711 14.7598C22.9616 14.3693 22.9616 13.7361 22.5711 13.3456C22.1805 12.9551 21.5474 12.9551 21.1569 13.3456L15.5 19.0025L9.84314 13.3456C9.45262 12.9551 8.81945 12.9551 8.42893 13.3456C8.03841 13.7361 8.03841 14.3693 8.42893 14.7598L14.7929 21.1238ZM1 22C0.447715 22 0 22.4477 0 23C0 23.5523 0.447715 24 1 24V22ZM30 24C30.5523 24 31 23.5523 31 23C31 22.4477 30.5523 22 30 22V24ZM15.5 1H14.5V20.4167H15.5H16.5V1H15.5ZM1 23V24H30V23V22H1V23Z" fill="white"/>
                             </svg>
                         </div>
-                        <p href="<?php echo esc_url( $project_example_link) ; ?>" class="exampleSectionContent__textContainer__link__text">
+                        <p class="exampleSectionContent__textContainer__link__text">
                             скачать
                         </p>
                     </a>

@@ -102,9 +102,9 @@ html{
 	--footerButtonTextColor: #FFFFFF;
 	--burgerMenuColor: #000000;
 	--accordionBackgroundColor: #1937591A;
-	--contactButtonColor: #202020;
-	--menuLogo: url("./img/menu/logo-light-theme.png");
-	--footerLogo: url("./img/footer/logo-light-theme.png");
+	--contactButtonPanelColor: #202020;
+	--menuLogo: url("img/shared/menu/logo-light-theme.png");
+	--footerLogo: url("img/shared/footer/footer-light-theme.png");
 	--balloonImage: url("./img/contactsPage/mapBallon/light-theme.png");
 }
 @media (prefers-color-scheme: dark) {
@@ -121,9 +121,9 @@ html{
 		--footerButtonTextColor: #202020;
 		--burgerMenuColor: #FFFFFF;
 		--accordionBackgroundColor: #8DC1FF1A;
-		--contactButtonColor: #FFFFFF;
-		--menuLogo: url("./img/menu/logo-dark-theme.png");
-		--footerLogo: url("./img/footer/logo-dark-theme.png");
+		--contactButtonPanelColor: #E8EBEE;
+		--menuLogo: url("img/shared/menu/logo-dark-theme.png");
+		--footerLogo: url("img/shared/footer/footer-dark-theme.png");
 		--balloonImage: url("./img/contactsPage/mapBallon/dark-theme.png");
 	}
 }
@@ -225,7 +225,7 @@ body::-webkit-scrollbar-thumb {
 	border-radius: 65px;
 	position: absolute;
 	bottom: 0;
-	background-color: var(--contactButtonColor);
+	background-color: var(--additionalColor);
 	height: 92px;
 	width: 92px;
 	cursor: pointer;
@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb {
 .hiddenButtons__contactButtonContainer__panel{
 	height: 0;
 	width: 60px;
-	background-color: #F1F1F1;
+	background-color: var(--contactButtonPanelColor);
 	overflow: hidden;
 	position: absolute;
 	bottom: 20px;
@@ -856,22 +856,21 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 .benefitSectionContent{
 	display: flex;
 	flex-direction: column;
-	gap: 60px;
+	gap: 16px;
 	padding-bottom: 93px;
 	z-index: 1;
 }
 .benefitSectionContent__images{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	gap: 44px;
 }
-.benefitSectionContent__images:has(:nth-child(4)){
-	display: grid;
-	grid-template-columns: repeat(4, auto);
+.benefitSectionContent__imagesPhone{
+	display: none;
 }
 .benefitSectionContent__images__image{
-	width: 100%;
+	width: calc(25% - 33px);
 	height: 315px;
 	display: flex;
 	align-items: center;
@@ -1009,6 +1008,9 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 .footerTopSection__image{
 	width: 221px;
 	height: 66px;
+	background-position: center center;
+	background-size: contain;
+	background-repeat: no-repeat;
 	background-image: var(--footerLogo);
 }
 .feedbackSectionContent{
@@ -1202,10 +1204,12 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 }
 .benefitSectionContent__images__image__text {
 	position: absolute;
-	padding-left: 18px;
+	padding: 0 18px;
+	width: 100%;
 	color: #FFFFFF;
 	font-weight: 400;
 	font-size: 24px;
+
 }
 .headerSection{
 	position: relative;
@@ -1222,7 +1226,7 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 	flex-direction: column;
 	align-items: center;
 	height: fit-content;
-	max-height: calc(100vh - 70px);
+	/*max-height: calc(100vh - 70px);*/
 }
 .headerSection br{
 	display: none;
@@ -1679,6 +1683,7 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
+	padding-bottom: 80px;
 }
 .exampleSectionContent{
 	display: flex;
@@ -1736,6 +1741,14 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 	width: 100%;
 	padding: 40px 172px 120px;
 }
+.hiddenButtons__contactButtonContainer__button__image{
+	width: 49px;
+	height: 44px;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url("./img/shared/contact-button/contact-button.png");
+}
 @media screen and (max-width: 1440px){
 	.sectionStats{
 		justify-content: center;
@@ -1786,19 +1799,21 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 		font-size: 17px;
 	}
 	.benefitSectionContent__images{
-		display: grid;
+		display: none;
 		gap: 16px;
 		align-items: center;
 		justify-content: center;
 		grid-template-columns: 1fr 1fr;
 	}
-	.benefitSectionContent__images:has(:nth-child(4)){
-		grid-template-columns: 1fr 1fr
+	.benefitSectionContent__imagesPhone{
+		display: flex;
+		justify-content: center;
+		gap: 16px;
 	}
 	.benefitSectionContent__images__image{
 		justify-content: start;
 		align-items: center;
-		width: 100%;
+		width: calc(50% - 8px);
 	}
 	.benefitSectionContent__images__image__text{
 		padding-left: 8px;
@@ -2323,6 +2338,43 @@ section:nth-of-type(odd) .sectionInfo .scrollSliderSectionContent{
 	}
 	.exampleSectionContent__textContainer{
 		gap: 20px;
+	}
+	.hiddenButtons__scrollToTopButton{
+		height: 60px;
+		width: 60px;
+	}
+	.hiddenButtons__contactButtonContainer{
+		display: flex;
+		justify-content: center;
+		align-items: end;
+		height: 60px;
+		transition: height 300ms ease-in-out;
+	}
+	.hiddenButtons__contactButtonContainer._active{
+		height: 220px;
+	}
+	.hiddenButtons__contactButtonContainer__panel{
+		width: 50px;
+	}
+	.hiddenButtons__contactButtonContainer__panel._active{
+		height: 200px
+	}
+	.hiddenButtons__contactButtonContainer__button{
+		height: 60px;
+		width: 60px;
+	}
+	.hiddenButtons__contactButtonContainer__button._active{
+		border-radius: 20px;
+	}
+	.hiddenButtons__contactButtonContainer__button__image{
+		height: 28px;
+		width: 31px;
+	}
+	.hiddenButtons__scrollToTopButton svg{
+		height: 50px;
+	}
+	.videoSection__video{
+		padding: 40px 0 80px;
 	}
 }
 @media screen and (max-width: 500px) {
